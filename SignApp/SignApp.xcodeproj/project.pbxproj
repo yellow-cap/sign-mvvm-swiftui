@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC80C359263C1F9B007ED4F3 /* SignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C358263C1F9B007ED4F3 /* SignApp.swift */; };
+		AC80C35B263C1F9B007ED4F3 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C35A263C1F9B007ED4F3 /* SignView.swift */; };
+		AC80C35D263C1FA0007ED4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC80C35C263C1FA0007ED4F3 /* Assets.xcassets */; };
+		AC80C360263C1FA0007ED4F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC80C35F263C1FA0007ED4F3 /* Preview Assets.xcassets */; };
+		AC80C36B263C1FA0007ED4F3 /* SignAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C36A263C1FA0007ED4F3 /* SignAppTests.swift */; };
+		AC80C376263C1FA0007ED4F3 /* SignAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C375263C1FA0007ED4F3 /* SignAppUITests.swift */; };
+		AC80C386263C215E007ED4F3 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C385263C215E007ED4F3 /* SignViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC80C367263C1FA0007ED4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC80C34D263C1F9B007ED4F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC80C354263C1F9B007ED4F3;
+			remoteInfo = SignApp;
+		};
+		AC80C372263C1FA0007ED4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC80C34D263C1F9B007ED4F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC80C354263C1F9B007ED4F3;
+			remoteInfo = SignApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC80C355263C1F9B007ED4F3 /* SignApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80C358263C1F9B007ED4F3 /* SignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignApp.swift; sourceTree = "<group>"; };
+		AC80C35A263C1F9B007ED4F3 /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		AC80C35C263C1FA0007ED4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC80C35F263C1FA0007ED4F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC80C361263C1FA0007ED4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC80C366263C1FA0007ED4F3 /* SignAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80C36A263C1FA0007ED4F3 /* SignAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAppTests.swift; sourceTree = "<group>"; };
+		AC80C36C263C1FA0007ED4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC80C371263C1FA0007ED4F3 /* SignAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80C375263C1FA0007ED4F3 /* SignAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAppUITests.swift; sourceTree = "<group>"; };
+		AC80C377263C1FA0007ED4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC80C385263C215E007ED4F3 /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC80C352263C1F9B007ED4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC80C363263C1FA0007ED4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC80C36E263C1FA0007ED4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC80C34C263C1F9B007ED4F3 = {
+			isa = PBXGroup;
+			children = (
+				AC80C357263C1F9B007ED4F3 /* SignApp */,
+				AC80C369263C1FA0007ED4F3 /* SignAppTests */,
+				AC80C374263C1FA0007ED4F3 /* SignAppUITests */,
+				AC80C356263C1F9B007ED4F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC80C356263C1F9B007ED4F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C355263C1F9B007ED4F3 /* SignApp.app */,
+				AC80C366263C1FA0007ED4F3 /* SignAppTests.xctest */,
+				AC80C371263C1FA0007ED4F3 /* SignAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC80C357263C1F9B007ED4F3 /* SignApp */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C383263C2055007ED4F3 /* Modules */,
+				AC80C358263C1F9B007ED4F3 /* SignApp.swift */,
+				AC80C35C263C1FA0007ED4F3 /* Assets.xcassets */,
+				AC80C361263C1FA0007ED4F3 /* Info.plist */,
+				AC80C35E263C1FA0007ED4F3 /* Preview Content */,
+			);
+			path = SignApp;
+			sourceTree = "<group>";
+		};
+		AC80C35E263C1FA0007ED4F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C35F263C1FA0007ED4F3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC80C369263C1FA0007ED4F3 /* SignAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C36A263C1FA0007ED4F3 /* SignAppTests.swift */,
+				AC80C36C263C1FA0007ED4F3 /* Info.plist */,
+			);
+			path = SignAppTests;
+			sourceTree = "<group>";
+		};
+		AC80C374263C1FA0007ED4F3 /* SignAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C375263C1FA0007ED4F3 /* SignAppUITests.swift */,
+				AC80C377263C1FA0007ED4F3 /* Info.plist */,
+			);
+			path = SignAppUITests;
+			sourceTree = "<group>";
+		};
+		AC80C383263C2055007ED4F3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C384263C2107007ED4F3 /* Sign */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC80C384263C2107007ED4F3 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				AC80C35A263C1F9B007ED4F3 /* SignView.swift */,
+				AC80C385263C215E007ED4F3 /* SignViewModel.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC80C354263C1F9B007ED4F3 /* SignApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC80C37A263C1FA0007ED4F3 /* Build configuration list for PBXNativeTarget "SignApp" */;
+			buildPhases = (
+				AC80C351263C1F9B007ED4F3 /* Sources */,
+				AC80C352263C1F9B007ED4F3 /* Frameworks */,
+				AC80C353263C1F9B007ED4F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignApp;
+			productName = SignApp;
+			productReference = AC80C355263C1F9B007ED4F3 /* SignApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC80C365263C1FA0007ED4F3 /* SignAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC80C37D263C1FA0007ED4F3 /* Build configuration list for PBXNativeTarget "SignAppTests" */;
+			buildPhases = (
+				AC80C362263C1FA0007ED4F3 /* Sources */,
+				AC80C363263C1FA0007ED4F3 /* Frameworks */,
+				AC80C364263C1FA0007ED4F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC80C368263C1FA0007ED4F3 /* PBXTargetDependency */,
+			);
+			name = SignAppTests;
+			productName = SignAppTests;
+			productReference = AC80C366263C1FA0007ED4F3 /* SignAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC80C370263C1FA0007ED4F3 /* SignAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC80C380263C1FA0007ED4F3 /* Build configuration list for PBXNativeTarget "SignAppUITests" */;
+			buildPhases = (
+				AC80C36D263C1FA0007ED4F3 /* Sources */,
+				AC80C36E263C1FA0007ED4F3 /* Frameworks */,
+				AC80C36F263C1FA0007ED4F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC80C373263C1FA0007ED4F3 /* PBXTargetDependency */,
+			);
+			name = SignAppUITests;
+			productName = SignAppUITests;
+			productReference = AC80C371263C1FA0007ED4F3 /* SignAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC80C34D263C1F9B007ED4F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					AC80C354263C1F9B007ED4F3 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					AC80C365263C1FA0007ED4F3 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = AC80C354263C1F9B007ED4F3;
+					};
+					AC80C370263C1FA0007ED4F3 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = AC80C354263C1F9B007ED4F3;
+					};
+				};
+			};
+			buildConfigurationList = AC80C350263C1F9B007ED4F3 /* Build configuration list for PBXProject "SignApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC80C34C263C1F9B007ED4F3;
+			productRefGroup = AC80C356263C1F9B007ED4F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC80C354263C1F9B007ED4F3 /* SignApp */,
+				AC80C365263C1FA0007ED4F3 /* SignAppTests */,
+				AC80C370263C1FA0007ED4F3 /* SignAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC80C353263C1F9B007ED4F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC80C360263C1FA0007ED4F3 /* Preview Assets.xcassets in Resources */,
+				AC80C35D263C1FA0007ED4F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC80C364263C1FA0007ED4F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC80C36F263C1FA0007ED4F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC80C351263C1F9B007ED4F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC80C386263C215E007ED4F3 /* SignViewModel.swift in Sources */,
+				AC80C35B263C1F9B007ED4F3 /* SignView.swift in Sources */,
+				AC80C359263C1F9B007ED4F3 /* SignApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC80C362263C1FA0007ED4F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC80C36B263C1FA0007ED4F3 /* SignAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC80C36D263C1FA0007ED4F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC80C376263C1FA0007ED4F3 /* SignAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC80C368263C1FA0007ED4F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC80C354263C1F9B007ED4F3 /* SignApp */;
+			targetProxy = AC80C367263C1FA0007ED4F3 /* PBXContainerItemProxy */;
+		};
+		AC80C373263C1FA0007ED4F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC80C354263C1F9B007ED4F3 /* SignApp */;
+			targetProxy = AC80C372263C1FA0007ED4F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AC80C378263C1FA0007ED4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC80C379263C1FA0007ED4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC80C37B263C1FA0007ED4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SignApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KA3NJF7MTD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SignApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artem.SignApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC80C37C263C1FA0007ED4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SignApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KA3NJF7MTD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SignApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artem.SignApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC80C37E263C1FA0007ED4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KA3NJF7MTD;
+				INFOPLIST_FILE = SignAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artem.SignAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignApp.app/SignApp";
+			};
+			name = Debug;
+		};
+		AC80C37F263C1FA0007ED4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KA3NJF7MTD;
+				INFOPLIST_FILE = SignAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artem.SignAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignApp.app/SignApp";
+			};
+			name = Release;
+		};
+		AC80C381263C1FA0007ED4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KA3NJF7MTD;
+				INFOPLIST_FILE = SignAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artem.SignAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignApp;
+			};
+			name = Debug;
+		};
+		AC80C382263C1FA0007ED4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KA3NJF7MTD;
+				INFOPLIST_FILE = SignAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artem.SignAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC80C350263C1F9B007ED4F3 /* Build configuration list for PBXProject "SignApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC80C378263C1FA0007ED4F3 /* Debug */,
+				AC80C379263C1FA0007ED4F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC80C37A263C1FA0007ED4F3 /* Build configuration list for PBXNativeTarget "SignApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC80C37B263C1FA0007ED4F3 /* Debug */,
+				AC80C37C263C1FA0007ED4F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC80C37D263C1FA0007ED4F3 /* Build configuration list for PBXNativeTarget "SignAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC80C37E263C1FA0007ED4F3 /* Debug */,
+				AC80C37F263C1FA0007ED4F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC80C380263C1FA0007ED4F3 /* Build configuration list for PBXNativeTarget "SignAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC80C381263C1FA0007ED4F3 /* Debug */,
+				AC80C382263C1FA0007ED4F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC80C34D263C1F9B007ED4F3 /* Project object */;
+}
