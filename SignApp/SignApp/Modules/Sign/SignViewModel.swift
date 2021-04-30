@@ -3,10 +3,13 @@ import Combine
 
 class SignViewModel: ObservableObject {
     @Published var userName: String = ""
+    private let fetcher: IAccountFetcher
     
     private var subscriptions = Set<AnyCancellable>()
     
-    init() {
+    init(accountFetcher: IAccountFetcher) {
+        fetcher = accountFetcher
+        
         $userName
             .debounce(for: 1, scheduler: DispatchQueue.main)
             .removeDuplicates()
@@ -20,5 +23,6 @@ class SignViewModel: ObservableObject {
         guard !userName.isEmpty else { return }
         
         print("<<<DEV>>> \(userName)")
+        fetcher.validateUserName(userName: userName)
     }
 }

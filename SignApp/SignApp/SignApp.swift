@@ -11,7 +11,10 @@ import SwiftUI
 struct SignApp: App {
     var body: some Scene {
         WindowGroup {
-            SignView(viewModel: SignViewModel())
+            SignView(
+                viewModel: SignViewModel(
+                    accountFetcher: AccountFetcherMock())
+            )
         }
     }
 }
