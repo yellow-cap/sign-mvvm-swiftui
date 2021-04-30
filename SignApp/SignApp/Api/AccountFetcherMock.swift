@@ -2,18 +2,19 @@ import Foundation
 import Combine
 
 protocol IAccountFetcher {
-    func validateUserName(userName: String )
+    func validateUserName(userName: String)
 }
 
 class AccountFetcherMock: IAccountFetcher {
-    private let delay = 5
-    
     func validateUserName(userName: String) {
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + .seconds(delay)) {
-            
-            DispatchQueue.main.async {
-                print("<<<DEV>>> Server name valiadtion \(userName)")
-            }
+        var result: Bool = false
+        
+        DispatchQueue.global().sync {
+            sleep(5)
+            result = ServerMock.validateUserName(userName)
         }
+        
+        
+        print("<<<DEV>>> result \(result)")
     }
 }
