@@ -10,7 +10,7 @@ struct SignView: View {
             }
             Section {
                 SecureField(StringResources.passwordPlaceholder, text: $viewModel.password)
-                SecureField(StringResources.verifyPasswordPlaceholder, text: $viewModel.confirmPassword)
+                SecureField(StringResources.verifyPasswordPlaceholder, text: $viewModel.verifyPassword)
            }
             Section {
                 Button(action: {

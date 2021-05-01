@@ -10,11 +10,14 @@
 		AC3AF781263D839B00FDB5A2 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3AF780263D839B00FDB5A2 /* StringResources.swift */; };
 		AC637876263C4BFE00892626 /* AccountFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC637875263C4BFE00892626 /* AccountFetcherMock.swift */; };
 		AC63787A263C552900892626 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC637879263C552900892626 /* ServerMock.swift */; };
+		AC7932A8263DC4FF00E8C574 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C385263C215E007ED4F3 /* SignViewModel.swift */; };
+		AC7932A9263DC79400E8C574 /* AccountFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC637875263C4BFE00892626 /* AccountFetcherMock.swift */; };
+		AC7932AA263DC7CC00E8C574 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC637879263C552900892626 /* ServerMock.swift */; };
 		AC80C359263C1F9B007ED4F3 /* SignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C358263C1F9B007ED4F3 /* SignApp.swift */; };
 		AC80C35B263C1F9B007ED4F3 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C35A263C1F9B007ED4F3 /* SignView.swift */; };
 		AC80C35D263C1FA0007ED4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC80C35C263C1FA0007ED4F3 /* Assets.xcassets */; };
 		AC80C360263C1FA0007ED4F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC80C35F263C1FA0007ED4F3 /* Preview Assets.xcassets */; };
-		AC80C36B263C1FA0007ED4F3 /* SignAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C36A263C1FA0007ED4F3 /* SignAppTests.swift */; };
+		AC80C36B263C1FA0007ED4F3 /* SignModule_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C36A263C1FA0007ED4F3 /* SignModule_Tests.swift */; };
 		AC80C376263C1FA0007ED4F3 /* SignAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C375263C1FA0007ED4F3 /* SignAppUITests.swift */; };
 		AC80C386263C215E007ED4F3 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C385263C215E007ED4F3 /* SignViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +50,7 @@
 		AC80C35F263C1FA0007ED4F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC80C361263C1FA0007ED4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC80C366263C1FA0007ED4F3 /* SignAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC80C36A263C1FA0007ED4F3 /* SignAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAppTests.swift; sourceTree = "<group>"; };
+		AC80C36A263C1FA0007ED4F3 /* SignModule_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignModule_Tests.swift; sourceTree = "<group>"; };
 		AC80C36C263C1FA0007ED4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC80C371263C1FA0007ED4F3 /* SignAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC80C375263C1FA0007ED4F3 /* SignAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAppUITests.swift; sourceTree = "<group>"; };
@@ -142,7 +145,7 @@
 		AC80C369263C1FA0007ED4F3 /* SignAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC80C36A263C1FA0007ED4F3 /* SignAppTests.swift */,
+				AC80C36A263C1FA0007ED4F3 /* SignModule_Tests.swift */,
 				AC80C36C263C1FA0007ED4F3 /* Info.plist */,
 			);
 			path = SignAppTests;
@@ -316,7 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC80C36B263C1FA0007ED4F3 /* SignAppTests.swift in Sources */,
+				AC7932AA263DC7CC00E8C574 /* ServerMock.swift in Sources */,
+				AC7932A8263DC4FF00E8C574 /* SignViewModel.swift in Sources */,
+				AC7932A9263DC79400E8C574 /* AccountFetcherMock.swift in Sources */,
+				AC80C36B263C1FA0007ED4F3 /* SignModule_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

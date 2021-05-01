@@ -4,7 +4,7 @@ import Combine
 class SignViewModel: ObservableObject {
     @Published var userName: String = ""
     @Published var password: String = ""
-    @Published var confirmPassword: String = ""
+    @Published var verifyPassword: String = ""
     @Published var areUserCredentialsValid = false
     
     @Published private var isUserNameValid = false
@@ -38,7 +38,7 @@ class SignViewModel: ObservableObject {
             .assign(to: \.isPasswordValid, on: self)
             .store(in: &subscriptions)
         
-        $confirmPassword.combineLatest($password)
+        $verifyPassword.combineLatest($password)
             .debounce(for: 0.2, scheduler: DispatchQueue.main)
             .map({ combinedValue in
                 return combinedValue.0 == combinedValue.1
@@ -49,9 +49,6 @@ class SignViewModel: ObservableObject {
         
         $isUserNameValid.combineLatest($isPasswordValid, $arePasswordsEqual)
             .map({ combinedValue in
-                // print("<<<DEV>>> isUserNameValid = \(combinedValue.0)")
-                // print("<<<DEV>>> isPasswordValid = \(combinedValue.1)")
-                // print("<<<DEV>>> arePasswordsEqual = \(combinedValue.2)")
                 return combinedValue.0 && combinedValue.1 && combinedValue.2
             })
             .removeDuplicates()
@@ -70,7 +67,7 @@ class SignViewModel: ObservableObject {
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [unowned self] value in
-                // print("<<<DEV>>> Receive validation result in thread \(Thread.current) \(value)")
+                print("<<<DEV>>> Receive validation result in thread \(Thread.current) \(value)")
                 
                 self.isUserNameValid = value
             })
