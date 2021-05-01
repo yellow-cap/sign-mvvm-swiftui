@@ -77,10 +77,6 @@ class SignViewModel: ObservableObject {
     }
     
     private func isPasswordValid(_ password: String) -> Bool {
-        guard !password.isEmpty else {
-            return false
-        }
-        
         return password.count > 8
             // && password != "admin" TODO[ARTEM]: Remove unnecessary checks
             // && password != "password"
