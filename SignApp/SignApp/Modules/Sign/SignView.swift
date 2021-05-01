@@ -13,8 +13,10 @@ struct SignView: View {
               SecureField("Confirm password", text: $viewModel.confirmPassword)
            }
             Section {
-                Button(action: { }) {
-                    Text("Sign up")
+                Button(action: {
+                    print("<<<DEV>> Create account button tapped.")
+                }) {
+                    Text("Create account")
                     
                 }
                 .disabled(!viewModel.areUserCredentialsValid)
