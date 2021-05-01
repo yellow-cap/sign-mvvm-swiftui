@@ -3,6 +3,8 @@ import Combine
 
 class SignViewModel: ObservableObject {
     @Published var userName: String = ""
+    @Published var password: String = ""
+    @Published var confirmPassword: String = ""
     @Published var isValid = false
     private let fetcher: IAccountFetcher
     

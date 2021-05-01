@@ -11,8 +11,8 @@ let first = NotificationCenter.default.publisher(for: firstNotificationName)
 let second = NotificationCenter.default.publisher(for: secondNotificationName)
 // create and subscribe to Zip, Merge and CombineLatest
 
-let merged = Publishers.Merge(first, second).sink(receiveValue: { val in print(val, "merged")
-}).store(in: &cancellables)
+let combined = Publishers.CombineLatest(first, second).sink(receiveValue: { val in
+print(val, "combined") }).store(in: &cancellables)
 
 print("send first")
 NotificationCenter.default.post(firstNotification)

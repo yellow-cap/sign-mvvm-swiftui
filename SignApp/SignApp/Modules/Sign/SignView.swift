@@ -9,10 +9,15 @@ struct SignView: View {
                 TextField("User name", text: $viewModel.userName)
             }
             Section {
+              SecureField("Password", text: $viewModel.password)
+              SecureField("Confirm password", text: $viewModel.confirmPassword)
+           }
+            Section {
                 Button(action: { }) {
                     Text("Sign up")
                     
-                }.disabled(!viewModel.isValid)
+                }
+                .disabled(!viewModel.isValid)
             }
         }
     }
