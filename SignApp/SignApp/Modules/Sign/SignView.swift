@@ -6,17 +6,17 @@ struct SignView: View {
     var body: some View {
         Form {
             Section {
-                TextField("User name", text: $viewModel.userName)
+                TextField(StringResources.userNamePlaceholder, text: $viewModel.userName)
             }
             Section {
-              SecureField("Password", text: $viewModel.password)
-              SecureField("Confirm password", text: $viewModel.confirmPassword)
+                SecureField(StringResources.passwordPlaceholder, text: $viewModel.password)
+                SecureField(StringResources.verifyPasswordPlaceholder, text: $viewModel.confirmPassword)
            }
             Section {
                 Button(action: {
                     print("<<<DEV>> Create account button tapped.")
                 }) {
-                    Text("Create account")
+                    Text("\(StringResources.createAccountButtonTitle)")
                     
                 }
                 .disabled(!viewModel.areUserCredentialsValid)

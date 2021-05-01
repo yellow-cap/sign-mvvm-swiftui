@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC3AF781263D839B00FDB5A2 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3AF780263D839B00FDB5A2 /* StringResources.swift */; };
 		AC637876263C4BFE00892626 /* AccountFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC637875263C4BFE00892626 /* AccountFetcherMock.swift */; };
 		AC63787A263C552900892626 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC637879263C552900892626 /* ServerMock.swift */; };
 		AC80C359263C1F9B007ED4F3 /* SignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80C358263C1F9B007ED4F3 /* SignApp.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC3AF780263D839B00FDB5A2 /* StringResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResources.swift; sourceTree = "<group>"; };
 		AC637875263C4BFE00892626 /* AccountFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFetcherMock.swift; sourceTree = "<group>"; };
 		AC637879263C552900892626 /* ServerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMock.swift; sourceTree = "<group>"; };
 		AC80C355263C1F9B007ED4F3 /* SignApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC3AF77F263D836300FDB5A2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AC3AF780263D839B00FDB5A2 /* StringResources.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		AC637874263C4A2600892626 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		AC80C357263C1F9B007ED4F3 /* SignApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC3AF77F263D836300FDB5A2 /* App */,
 				AC637874263C4A2600892626 /* Api */,
 				AC80C383263C2055007ED4F3 /* Modules */,
 				AC80C358263C1F9B007ED4F3 /* SignApp.swift */,
@@ -292,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3AF781263D839B00FDB5A2 /* StringResources.swift in Sources */,
 				AC637876263C4BFE00892626 /* AccountFetcherMock.swift in Sources */,
 				AC80C386263C215E007ED4F3 /* SignViewModel.swift in Sources */,
 				AC80C35B263C1F9B007ED4F3 /* SignView.swift in Sources */,
