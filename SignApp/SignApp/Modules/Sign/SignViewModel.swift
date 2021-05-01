@@ -12,6 +12,7 @@ class SignViewModel: ObservableObject {
         
         $userName
             .debounce(for: 1, scheduler: DispatchQueue.main)
+            .filter({ !$0.isEmpty })
             .removeDuplicates()
             .sink(receiveValue: { [unowned self] userName in
                 self.validateUserName(userName)
@@ -19,9 +20,7 @@ class SignViewModel: ObservableObject {
             .store(in: &subscriptions)
     }
     
-    private func validateUserName(_ userName: String) {
-        guard !userName.isEmpty else { return }
-        
+    private func validateUserName(_ userName: String) {        
         fetcher.validateUserName(userName: userName)
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
