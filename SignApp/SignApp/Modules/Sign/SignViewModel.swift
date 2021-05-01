@@ -26,7 +26,7 @@ class SignViewModel: ObservableObject {
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { value in
-                print("<<<DEV>>> Receive in Thread \(Thread.current) \(value)")
+                print("<<<DEV>>> Receive validation result in thread \(Thread.current) \(value)")
             })
             .store(in: &subscriptions)
     }
