@@ -6,11 +6,9 @@ protocol IAccountFetcher {
 }
 
 class AccountFetcherMock: IAccountFetcher {
-    private let delay = 5
-    
     func validateUserName(userName: String) -> Future<Bool, Never> {
         return Future { promise in
-            DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(delay)) {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
                 promise(.success(ServerMock.validateUserName(userName)))
             }
         }
