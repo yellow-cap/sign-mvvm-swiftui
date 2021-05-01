@@ -6,7 +6,7 @@ protocol IAccountFetcher {
 }
 
 class AccountFetcherMock: IAccountFetcher {
-    let networkDelayInSeconds = 1
+    private let networkDelayInSeconds = 1
     
     func validateUserName(userName: String) -> Future<Bool, Never> {
         return Future { [weak self] promise in
