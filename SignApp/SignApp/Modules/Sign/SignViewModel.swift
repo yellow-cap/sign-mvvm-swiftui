@@ -6,6 +6,11 @@ class SignViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
     @Published var isValid = false
+    
+    @Published private var isUserNameValid = false
+    @Published private var isPasswordValid = false
+    @Published private var arePasswordsEqual = false
+    
     private let fetcher: IAccountFetcher
     
     private var subscriptions = Set<AnyCancellable>()
@@ -21,6 +26,25 @@ class SignViewModel: ObservableObject {
                 self.validateUserName(value)
             })
             .store(in: &subscriptions)
+        
+        $password
+            .filter({ !$0.isEmpty })
+            .map({ [unowned self] in
+                print("<<<DEV>>> isPasswordValid \(isPasswordValid($0))")
+                return self.isPasswordValid($0)
+            })
+            .assign(to: \.isPasswordValid, on: self)
+            .store(in: &subscriptions)
+        
+        $confirmPassword
+            .filter({ !$0.isEmpty })
+            .map({ [unowned self] in
+                print("<<<DEV>>> arePasswordsEqual \(arePasswordsEqual($0))")
+                
+                return self.arePasswordsEqual($0)
+            })
+            .assign(to: \.arePasswordsEqual, on: self)
+            .store(in: &subscriptions)
     }
     
     private func validateUserName(_ userName: String) {        
@@ -30,8 +54,18 @@ class SignViewModel: ObservableObject {
             .sink(receiveValue: { [unowned self] value in
                 print("<<<DEV>>> Receive validation result in thread \(Thread.current) \(value)")
                 
-                self.isValid = value
+                self.isUserNameValid = value
             })
             .store(in: &subscriptions)
+    }
+    
+    private func isPasswordValid(_ password: String) -> Bool {
+        return password.count > 8
+            && password != "admin"
+            && password != "password"
+    }
+    
+    private func arePasswordsEqual(_ password: String) -> Bool {
+        return password == self.password
     }
 }
