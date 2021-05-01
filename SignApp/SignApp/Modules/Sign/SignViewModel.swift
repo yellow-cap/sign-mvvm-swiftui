@@ -5,7 +5,7 @@ class SignViewModel: ObservableObject {
     @Published var userName: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
-    @Published var isValid = false
+    @Published var areUserCredentialsValid = false
     
     @Published private var isUserNameValid = false
     @Published private var isPasswordValid = false
@@ -28,6 +28,7 @@ class SignViewModel: ObservableObject {
             .store(in: &subscriptions)
         
         $password
+            .debounce(for: 1, scheduler: DispatchQueue.main)
             .filter({ !$0.isEmpty })
             .map({ [unowned self] in
                 print("<<<DEV>>> isPasswordValid \(isPasswordValid($0))")
@@ -37,6 +38,7 @@ class SignViewModel: ObservableObject {
             .store(in: &subscriptions)
         
         $confirmPassword
+            
             .filter({ !$0.isEmpty })
             .map({ [unowned self] in
                 print("<<<DEV>>> arePasswordsEqual \(arePasswordsEqual($0))")
@@ -61,8 +63,8 @@ class SignViewModel: ObservableObject {
     
     private func isPasswordValid(_ password: String) -> Bool {
         return password.count > 8
-            && password != "admin"
-            && password != "password"
+            // && password != "admin" TODO[ARTEM]: Remove unnecessary checks
+            // && password != "password"
     }
     
     private func arePasswordsEqual(_ password: String) -> Bool {

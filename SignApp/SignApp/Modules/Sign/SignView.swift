@@ -17,7 +17,7 @@ struct SignView: View {
                     Text("Sign up")
                     
                 }
-                .disabled(!viewModel.isValid)
+                .disabled(!viewModel.areUserCredentialsValid)
             }
         }
     }
