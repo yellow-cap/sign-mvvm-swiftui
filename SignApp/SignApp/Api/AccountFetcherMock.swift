@@ -10,7 +10,7 @@ class AccountFetcherMock: IAccountFetcher {
     
     func validateUserName(userName: String) -> Future<Bool, Never> {
         return Future { promise in
-            DispatchQueue.global().asyncAfter(deadline: .now() + delay) {
+            DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(delay)) {
                 promise(.success(ServerMock.validateUserName(userName)))
             }
         }
