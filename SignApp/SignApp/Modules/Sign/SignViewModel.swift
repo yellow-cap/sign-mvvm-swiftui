@@ -52,7 +52,6 @@ class SignViewModel: ObservableObject {
                 // print("<<<DEV>>> isPasswordValid = \(combinedValue.1)")
                 // print("<<<DEV>>> arePasswordsEqual = \(combinedValue.2)")
                 return combinedValue.0 && combinedValue.1 && combinedValue.2
-                
             })
             .removeDuplicates()
             .assign(to: \.areUserCredentialsValid, on: self)
