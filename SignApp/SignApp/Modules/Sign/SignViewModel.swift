@@ -20,7 +20,6 @@ class SignViewModel: ObservableObject {
         
         $userName
             .debounce(for: 1, scheduler: DispatchQueue.main)
-            .filter({ !$0.isEmpty })
             .removeDuplicates()
             .sink(receiveValue: { [unowned self] value in
                 self.validateUserName(value)
@@ -29,9 +28,8 @@ class SignViewModel: ObservableObject {
         
         $password
             .debounce(for: 1, scheduler: DispatchQueue.main)
-            .filter({ !$0.isEmpty })
             .map({ [unowned self] in
-                print("<<<DEV>>> isPasswordValid \(isPasswordValid($0))")
+                // print("<<<DEV>>> isPasswordValid \(isPasswordValid($0))")
                 return self.isPasswordValid($0)
             })
             .assign(to: \.isPasswordValid, on: self)
@@ -39,17 +37,34 @@ class SignViewModel: ObservableObject {
         
         $confirmPassword
             .debounce(for: 1, scheduler: DispatchQueue.main)
-            .filter({ !$0.isEmpty })
             .map({ [unowned self] in
-                print("<<<DEV>>> arePasswordsEqual \(arePasswordsEqual($0))")
+                // print("<<<DEV>>> arePasswordsEqual \(arePasswordsEqual($0))")
                 
                 return self.arePasswordsEqual($0)
             })
             .assign(to: \.arePasswordsEqual, on: self)
             .store(in: &subscriptions)
+        
+        $isUserNameValid.combineLatest($isPasswordValid, $arePasswordsEqual)
+            .map({ combinedValue in
+                let result = combinedValue.0 && combinedValue.1 && combinedValue.2
+                print("<<<DEV>>> isUserNameValid = \(combinedValue.0)")
+                print("<<<DEV>>> isPasswordValid = \(combinedValue.1)")
+                print("<<<DEV>>> arePasswordsEqual = \(combinedValue.2)")
+                return result
+                
+            })
+            .assign(to: \.areUserCredentialsValid, on: self)
+            .store(in: &subscriptions)
     }
     
-    private func validateUserName(_ userName: String) {        
+    private func validateUserName(_ userName: String) {
+        guard !userName.isEmpty else {
+            self.isUserNameValid = false
+            
+            return
+        }
+        
         fetcher.validateUserName(userName: userName)
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
@@ -62,12 +77,20 @@ class SignViewModel: ObservableObject {
     }
     
     private func isPasswordValid(_ password: String) -> Bool {
+        guard !password.isEmpty else {
+            return false
+        }
+        
         return password.count > 8
             // && password != "admin" TODO[ARTEM]: Remove unnecessary checks
             // && password != "password"
     }
     
     private func arePasswordsEqual(_ password: String) -> Bool {
+        guard !password.isEmpty else {
+            return false
+        }
+        
         return password == self.password
     }
 }
