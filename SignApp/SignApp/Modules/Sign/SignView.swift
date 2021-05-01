@@ -8,6 +8,12 @@ struct SignView: View {
             Section {
                 TextField("User name", text: $viewModel.userName)
             }
+            Section {
+                Button(action: { }) {
+                    Text("Sign up")
+                    
+                }.disabled(!viewModel.isValid)
+            }
         }
     }
 }

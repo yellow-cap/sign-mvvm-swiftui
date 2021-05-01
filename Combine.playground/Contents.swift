@@ -2,23 +2,30 @@ import Combine
 import Foundation
 import UIKit
 
-class Counter {
-    @Published var publishedValue = 1
-    var subjectValue = CurrentValueSubject<Int, Never>(1)
-}
+var cancellables = Set<AnyCancellable>()
+let firstNotificationName = Notification.Name("first")
+let secondNotificationName = Notification.Name("second")
+let firstNotification = Notification(name: firstNotificationName)
+let secondNotification = Notification(name: secondNotificationName)
+let first = NotificationCenter.default.publisher(for: firstNotificationName)
+let second = NotificationCenter.default.publisher(for: secondNotificationName)
+// create and subscribe to Zip, Merge and CombineLatest
 
-let c = Counter()
-c.$publishedValue
-    .sink(receiveValue: { int in
-        print("Current published value \(c.publishedValue), received value \(int)")
-})
+let merged = Publishers.Merge(first, second).sink(receiveValue: { val in print(val, "merged")
+}).store(in: &cancellables)
 
-c.subjectValue
-    .sink(receiveValue: { int in
-        print("Current subject value \(c.subjectValue.value), received value \(int)")
-})
+print("send first")
+NotificationCenter.default.post(firstNotification)
+print("send second")
+NotificationCenter.default.post(secondNotification)
+print("send third")
+NotificationCenter.default.post(firstNotification)
+print("send fourth")
+NotificationCenter.default.post(secondNotification)
+print("send fifth")
+NotificationCenter.default.post(secondNotification)
 
 
-c.publishedValue = 2
-c.subjectValue.value = 2
-
+print("send six")
+sleep(5)
+NotificationCenter.default.post(firstNotification)
