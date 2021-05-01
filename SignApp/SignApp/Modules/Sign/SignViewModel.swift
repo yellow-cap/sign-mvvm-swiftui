@@ -22,7 +22,12 @@ class SignViewModel: ObservableObject {
     private func validateUserName(_ userName: String) {
         guard !userName.isEmpty else { return }
         
-        print("<<<DEV>>> \(userName)")
         fetcher.validateUserName(userName: userName)
+            .subscribe(on: DispatchQueue.global())
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { value in
+                print("<<<DEV>>> Receive in Thread \(Thread.current) \(value)")
+            })
+            .store(in: &subscriptions)
     }
 }
