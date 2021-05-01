@@ -19,15 +19,16 @@ class SignViewModel: ObservableObject {
         fetcher = accountFetcher
         
         $userName
-            .debounce(for: 1, scheduler: DispatchQueue.main)
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .removeDuplicates()
             .sink(receiveValue: { [unowned self] value in
+                self.isUserNameValid = false
                 self.validateUserName(value)
             })
             .store(in: &subscriptions)
         
         $password
-            .debounce(for: 1, scheduler: DispatchQueue.main)
+            .debounce(for: 0.2, scheduler: DispatchQueue.main)
             .removeDuplicates()
             .map({ [unowned self] in
                 // print("<<<DEV>>> isPasswordValid \(isPasswordValid($0))")
@@ -37,7 +38,7 @@ class SignViewModel: ObservableObject {
             .store(in: &subscriptions)
         
         $confirmPassword.combineLatest($password)
-            .debounce(for: 1, scheduler: DispatchQueue.main)
+            .debounce(for: 0.2, scheduler: DispatchQueue.main)
             .map({ combinedValue in
                 return combinedValue.0 == combinedValue.1
             })
