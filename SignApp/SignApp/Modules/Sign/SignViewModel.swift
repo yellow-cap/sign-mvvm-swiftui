@@ -38,7 +38,7 @@ class SignViewModel: ObservableObject {
             .store(in: &subscriptions)
         
         $confirmPassword
-            
+            .debounce(for: 1, scheduler: DispatchQueue.main)
             .filter({ !$0.isEmpty })
             .map({ [unowned self] in
                 print("<<<DEV>>> arePasswordsEqual \(arePasswordsEqual($0))")
