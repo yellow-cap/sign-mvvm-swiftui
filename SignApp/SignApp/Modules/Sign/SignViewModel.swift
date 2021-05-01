@@ -12,6 +12,7 @@ class SignViewModel: ObservableObject {
     @Published private var arePasswordsEqual = false
     
     private let fetcher: IAccountFetcher
+    private let minPasswordLenght = 8
     
     private var subscriptions = Set<AnyCancellable>()
     
@@ -77,7 +78,7 @@ class SignViewModel: ObservableObject {
     }
     
     private func isPasswordValid(_ password: String) -> Bool {
-        return password.count > 8
+        return password.count > minPasswordLenght
             // && password != "admin" TODO[ARTEM]: Remove unnecessary checks
             // && password != "password"
     }
