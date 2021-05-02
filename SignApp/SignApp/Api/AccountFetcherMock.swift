@@ -13,7 +13,6 @@ class AccountFetcherMock: IAccountFetcher {
             guard let self = self else { return }
             
             DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(self.networkDelayInSeconds)) {
-                print("<<<DEV>>> Run validation in thread \(Thread.current)")
                 promise(.success(ServerMock.validateUserName(userName)))
             }
         }

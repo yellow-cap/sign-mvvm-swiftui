@@ -7,6 +7,7 @@ struct SignView: View {
         Form {
             Section {
                 TextField(StringResources.userNamePlaceholder, text: $viewModel.userName)
+                    .disableAutocorrection(true)
             }
             Section {
                 SecureField(StringResources.passwordPlaceholder, text: $viewModel.password)
@@ -14,7 +15,7 @@ struct SignView: View {
            }
             Section {
                 Button(action: {
-                    print("<<<DEV>> Create account button tapped.")
+                    print("<<<DEV>>> Create account button tapped.")
                 }) {
                     Text("\(StringResources.createAccountButtonTitle)")
                     

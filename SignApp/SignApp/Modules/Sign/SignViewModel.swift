@@ -32,7 +32,6 @@ class SignViewModel: ObservableObject {
             .debounce(for: 0.2, scheduler: DispatchQueue.main)
             .removeDuplicates()
             .map({ [unowned self] in
-                // print("<<<DEV>>> isPasswordValid \(isPasswordValid($0))")
                 return self.isPasswordValid($0)
             })
             .assign(to: \.isPasswordValid, on: self)
@@ -66,9 +65,7 @@ class SignViewModel: ObservableObject {
         fetcher.validateUserName(userName: userName)
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { [unowned self] value in
-                print("<<<DEV>>> Receive validation result in thread \(Thread.current) \(value)")
-                
+            .sink(receiveValue: { [unowned self] value in                
                 self.isUserNameValid = value
             })
             .store(in: &subscriptions)
