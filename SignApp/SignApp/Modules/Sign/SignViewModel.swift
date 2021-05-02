@@ -73,7 +73,7 @@ class SignViewModel: ObservableObject {
     
     private func isPasswordValid(_ password: String) -> Bool {
         return password.count > minPasswordLenght
-            // && password != "admin" TODO[ARTEM]: Remove unnecessary checks
+            // && password != "admin" TODO[ARTEM]: Unnecessary checks?
             // && password != "password"
     }
 }
